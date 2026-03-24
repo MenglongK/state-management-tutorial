@@ -150,6 +150,7 @@ endpoints: () => ({})  // split file of endpoints, so keep it empty
 ```
 
 #### 2. create reducer to handle CRUD or method
+##### * Query all data from api
 - **Structure**:
   `project/lib/feature/product/productApi.ts`
 
