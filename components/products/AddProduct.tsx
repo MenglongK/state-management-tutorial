@@ -16,7 +16,7 @@ export default function AddProduct() {
     return (
         <>
             <button onClick={handlePost} className="mx-auto">
-                <h3 className="bg-blue-600 w-fit px-3 py-2.5 rounded-lg">POST Products</h3>
+                <h3 className="bg-blue-600 w-fit px-3 py-2.5 rounded-lg">Add New Products</h3>
             </button>
         </>
     )

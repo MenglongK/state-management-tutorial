@@ -9,7 +9,7 @@ export default function GetProductById({id}: { id: number }) {
     console.log("Error status: ", error)
     return (
         <>
-            {isSuccess ? <h3>Product by id = {id}</h3> : isLoading ? <h3>Product fetch is loading...</h3> :
+            {isSuccess ? <h3>Product by id = {id} {data.title}</h3> : isLoading ? <h3>Product fetch is loading...</h3> :
                 <h3>Product fetching is fail!!!</h3>}
         </>
     )

@@ -25,6 +25,15 @@ export type ProductPost = {
     title: string,
     price: number,
     description: string,
-    category: number,
+    categoryId: number,
+    images: string[],
+}
+
+// PUT/update product
+export type ProductPut = {
+    title: string,
+    price: number,
+    description: string,
+    categoryId: number,
     images: string[],
 }

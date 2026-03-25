@@ -1,5 +1,5 @@
 import {fakeStoreApi} from "@/lib/api/api";
-import {ProductPost, ProductResponse} from "@/lib/type/products";
+import {ProductPost, ProductPut, ProductResponse} from "@/lib/type/products";
 
 export const productApi = fakeStoreApi.injectEndpoints({
     endpoints: (builder) => ({
@@ -16,9 +16,22 @@ export const productApi = fakeStoreApi.injectEndpoints({
                 body: newProduct
             }),
             invalidatesTags: ['Product'],
+        }),
+        putProducts: builder.mutation<ProductPut, { id: number, object: ProductPut }>({
+            query: ({id, object}) => ({
+                url: `products/${id}`,
+                method: 'PUT',
+                body: object
+            }),
+            invalidatesTags: ['Product']
         })
     })
 })
 
 // export hook for UI call
-export const {useGetProductsQuery, useGetProductsByIdQuery, usePostProductsMutation} = productApi;
+export const {
+    useGetProductsQuery,
+    useGetProductsByIdQuery,
+    usePostProductsMutation,
+    usePutProductsMutation
+} = productApi;
