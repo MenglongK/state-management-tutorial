@@ -1,6 +1,7 @@
-import ProductCard from "@/components/products/ProductCard";
 import AddProduct from "@/components/products/AddProduct";
 import UpdateProduct from "@/components/products/UpdateProduct";
+import DeleteProduct from "@/components/products/DeleteProduct";
+import ProductCard from "@/components/products/ProductCard";
 
 export default function Page() {
     return (
@@ -9,6 +10,7 @@ export default function Page() {
                 {/*<ProductCard/>*/}
                 <AddProduct/>
                 <UpdateProduct/>
+                <DeleteProduct/>
             </div>
 
         </>
