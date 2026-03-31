@@ -5,7 +5,7 @@ export default function DeleteProduct() {
     const [deleteProduct, {data, isLoading, error, isSuccess}] = useDeleteProductsMutation()
     const handleDelete = async () => {
         try {
-            const response = await deleteProduct(90).unwrap()
+            const response = await deleteProduct(120).unwrap()
             console.log(response)
         } catch (error) {
             console.log("error status: ", error);
